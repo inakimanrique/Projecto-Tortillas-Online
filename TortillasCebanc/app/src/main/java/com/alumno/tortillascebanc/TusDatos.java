@@ -37,7 +37,7 @@ public class TusDatos extends AppCompatActivity {
     }
     public void lanzarDatos (){
 
-        Intent intent = new Intent(this, ElegirTortilla.class);
+        Intent intent = new Intent(this, ElegirBebidas.class);
         Intent intent2 = new Intent(this, ResumenPedido.class);
         intent2.putExtra("Nombre", name.getText().toString());
         intent2.putExtra("Direccion", direccion.getText().toString());

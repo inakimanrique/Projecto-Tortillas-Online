@@ -11,12 +11,16 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class ElegirBebidas extends AppCompatActivity { private Spinner Opciones;
+public class ElegirBebidas extends AppCompatActivity {
+    private Spinner Opciones;
     private EditText cantidad;
     private float precio;
+    private float preciocan;
+    private float total;
     private TextView mensaje;
     private float cant;
-    private String cola = "Refresco de cola", limon = "Limón", naranja = "Naranja", nestea = "Nestea", cerveza = "Cerveza", agua = "Agua";
+    private Button añadir;
+
 
 
     @Override
@@ -25,12 +29,12 @@ public class ElegirBebidas extends AppCompatActivity { private Spinner Opciones;
         setContentView(R.layout.activity_elegir_bebidas);
 
 
-
+        añadir = (Button)findViewById(R.id.btnAñadir);
         Opciones=(Spinner)findViewById(R.id.cmbOpciones);
         cantidad = (EditText) findViewById(R.id.txtCantidad);
         mensaje = (TextView) findViewById(R.id.lblMensaje);
 
-        cantidad.setText("1");
+
 
 
 
@@ -52,32 +56,28 @@ public class ElegirBebidas extends AppCompatActivity { private Spinner Opciones;
                                                android.view.View v, int position, long id) {
 
 
-                        cant = Float.parseFloat(cantidad.getText().toString());
 
-                        if (cant <= 20) {
                             if (position == 0) {
-                                precio = 2 * cant;
-                                mensaje.setText("Has elegido " + cant + " unidades de " + cola + " el precio total es: " + precio + "€");
+                                precio = 2;
+
                             } else if (position == 1) {
-                                precio = 2 * cant;
-                                mensaje.setText("Has elegido " + cant + " unidades de " + limon + " el precio total es: " + precio + "€");
+                                precio = 2 ;
+
                             } else if (position == 2) {
-                                precio = (float) (1.5 * cant);
-                                mensaje.setText("Has elegido " + cant + " unidades de " + naranja + " el precio total es: " + precio + "€");
+                                precio = (float) (1.5);
+
                             } else if (position == 3) {
-                                precio = 2 * cant;
-                                mensaje.setText("Has elegido " + cant + " unidades de " + nestea + " el precio total es: " + precio + "€");
+                                precio = 2 ;
+
                             } else if (position == 4) {
-                                precio = (float) (1.5 * cant);
-                                mensaje.setText("Has elegido " + cant + " unidades de " + cerveza + " el precio total es: " + precio + "€");
+                                precio = (float) (1.5);
+
                             } else if (position == 5) {
-                                precio = 1 * cant;
-                                mensaje.setText("Has elegido " + cant + " unidades de " + agua + " el precio total es: " + precio + "€");
+                                precio = 1;
+
                             }
 
-                        }else{
-                            cantidad.setError("No puedes pedir más de 20 bebidas.");
-                        }
+
                     }
 
 
@@ -85,5 +85,26 @@ public class ElegirBebidas extends AppCompatActivity { private Spinner Opciones;
                         mensaje.setText("");
                     }
                 });
+
+
+        añadir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+        cant = Float.parseFloat(cantidad.getText().toString());
+
+        if (cant <= 20) {
+                preciocan = precio*cant;
+        } else {
+            cantidad.setError("No puedes pedir más de 20 bebidas.");
+        }
+                total=total+preciocan;
+                mensaje.setText("Precio: " + total + " €");
+
+
+            }
+
+
+    });
+
     }
-}
+   }

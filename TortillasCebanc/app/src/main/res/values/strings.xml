@@ -6,6 +6,7 @@
     <string name="telefono">Teléfono:</string>
     <string name="salir">Salir</string>
     <string name="siguiente">Siguiente</string>
+    <string name="añadir">Añadir</string>
     <string-array name="SpinnerArray">
         <item>Refresco de cola - 2€</item>
         <item>Limón - 2€</item>
