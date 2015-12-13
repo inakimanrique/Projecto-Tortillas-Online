@@ -6,4 +6,12 @@
     <string name="telefono">Teléfono:</string>
     <string name="salir">Salir</string>
     <string name="siguiente">Siguiente</string>
+    <string-array name="SpinnerArray">
+        <item>Refresco de cola - 2€</item>
+        <item>Limón - 2€</item>
+        <item>Naranja - 1.50€</item>
+        <item>Nestea - 2€</item>
+        <item>Cerveza - 1.50€</item>
+        <item>Agua - 1€</item>
+    </string-array>
 </resources>
