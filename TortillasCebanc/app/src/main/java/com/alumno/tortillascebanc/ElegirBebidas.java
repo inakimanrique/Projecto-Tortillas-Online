@@ -106,5 +106,10 @@ public class ElegirBebidas extends AppCompatActivity {
 
     });
 
+
+
+    }
+    public void salirAplicacion(View view){
+        System.exit(0);
     }
    }
