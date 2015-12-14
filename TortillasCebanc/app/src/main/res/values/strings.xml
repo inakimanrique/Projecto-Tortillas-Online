@@ -5,7 +5,7 @@
     <string name="direccion">Dirección:</string>
     <string name="telefono">Teléfono:</string>
     <string name="atras">Atras</string>
-    <string name="salir">Salir</string>
+    <string name="salir">salir</string>
     <string name="siguiente">Siguiente</string>
     <string name="añadir">Añadir</string>
     <string-array name="SpinnerArray">
