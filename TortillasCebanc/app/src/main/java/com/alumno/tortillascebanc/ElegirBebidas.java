@@ -91,7 +91,7 @@ public class ElegirBebidas extends AppCompatActivity {
             @Override
             public void onClick(View v) {
         cant = Float.parseFloat(cantidad.getText().toString());
-
+                if (cantidad.length() > 0) {
         if (cant <= 20) {
                 preciocan = precio*cant;
         } else {
@@ -102,6 +102,9 @@ public class ElegirBebidas extends AppCompatActivity {
 
 
             }
+            }else
+            error();
+
 
 
     });
