@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class TusDatos extends AppCompatActivity {
     private Button bSiguiente;
-    private EditText name, direccion, telefono;
+    private EditText nombre, direccion, telefono;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +18,14 @@ public class TusDatos extends AppCompatActivity {
         setContentView(R.layout.activity_tus_datos);
 
         bSiguiente = (Button) findViewById(R.id.btnSiguiente);
-        name = (EditText)findViewById(R.id.txtNombre);
+        nombre = (EditText)findViewById(R.id.txtNombre);
         direccion = (EditText)findViewById(R.id.txtDireccion);
         telefono = (EditText)findViewById(R.id.txtTelefono);
 
         bSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (name.length() > 0 && direccion.length() > 0 && telefono.length() >0) {
+                if (nombre.length() > 0 && direccion.length() > 0 && telefono.length() >0) {
                     lanzarDatos();
 
                 }else
@@ -37,11 +37,10 @@ public class TusDatos extends AppCompatActivity {
     }
     public void lanzarDatos (){
 
-        Intent intent = new Intent(this, ElegirBebidas.class);
-        Intent intent2 = new Intent(this, ResumenPedido.class);
-        intent2.putExtra("Nombre", name.getText().toString());
-        intent2.putExtra("Direccion", direccion.getText().toString());
-        intent2.putExtra("Telefono", telefono.getText().toString());
+        Intent intent = new Intent(this, ElegirTortilla.class);
+        intent.putExtra("Nombre", nombre.getText().toString());
+        intent.putExtra("Direccion", direccion.getText().toString());
+        intent.putExtra("Telefono", telefono.getText().toString());
         startActivity(intent);
     }
 

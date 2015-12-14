@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="¿Qué vas a beber?"
-        android:id="@+id/textView"
+        android:id="@+id/txtTitulo"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -20,11 +20,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/cmbOpciones"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/txtTitulo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+        android:layout_alignRight="@+id/txtTitulo"
+        android:layout_alignEnd="@+id/txtTitulo" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,14 +45,14 @@
         android:layout_alignTop="@+id/textView2"
         android:layout_alignRight="@+id/cmbOpciones"
         android:layout_alignEnd="@+id/cmbOpciones"
-        android:layout_toRightOf="@+id/button3"
-        android:layout_toEndOf="@+id/button3" />
+        android:layout_toRightOf="@+id/btnSalir"
+        android:layout_toEndOf="@+id/btnSalir" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/siguiente"
-        android:id="@+id/button"
+        android:id="@+id/btnSiguiente"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -64,7 +64,7 @@
         android:textSize="20dp"
         android:text="Precio"
         android:layout_marginBottom="65dp"
-        android:layout_above="@+id/button3"
+        android:layout_above="@+id/btnSalir"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -72,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/atras"
-        android:id="@+id/button3"
+        android:id="@+id/btnSalir"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"

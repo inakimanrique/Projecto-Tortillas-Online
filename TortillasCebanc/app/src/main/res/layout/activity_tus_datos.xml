@@ -10,96 +10,72 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/introduce"
-        android:id="@+id/textView"
+        android:id="@+id/txtTitulo"
         android:textSize="35dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/direccion"
-        android:id="@+id/textView3"
-        android:textSize="20dp"
-        android:layout_above="@+id/txtDireccion"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nombre"
-        android:id="@+id/textView2"
-        android:textSize="20dp"
-        android:layout_above="@+id/txtNombre" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtNombre"
         android:layout_gravity="center_horizontal"
-        android:layout_above="@+id/textView3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtDireccion"
-        android:layout_above="@+id/textView4"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_marginTop="46dp"
+        android:layout_alignRight="@+id/txtDireccion"
+        android:layout_alignEnd="@+id/txtDireccion"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/txtTelefono"
-        android:layout_alignEnd="@+id/txtTelefono" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/telefono"
-        android:id="@+id/textView4"
-        android:textSize="20dp"
-        android:layout_centerVertical="true" />
+        android:hint="Nombre" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDireccion"
+        android:layout_below="@+id/txtNombre"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Dirección" />
+
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtTelefono"
         android:inputType="number"
         android:maxLength="9"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/btnSiguiente"
-        android:layout_alignEnd="@+id/btnSiguiente" />
+        android:layout_below="@+id/txtDireccion"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Teléfono" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/salir"
-        android:id="@+id/button"
+        android:id="@+id/btnSiguiente"
         android:onClick="salir"
-        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/siguiente"
+        android:text="@string/tortilla"
         android:id="@+id/btnSiguiente"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignTop="@+id/btnSiguiente"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/imageView"
         android:src="@drawable/logotortilla"
-        android:layout_below="@+id/txtTelefono"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/button" />
+        android:layout_below="@+id/btnSiguiente"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
